@@ -1,0 +1,7 @@
+{
+  "uri": "api_veropay/_get_decoupage_geographique_2",
+  "type":"non_static",
+  "rubrique_valeur": "r_i",
+  "rubrique_text" : "r_nom",
+  "lib_defaut": "Selectionnez zone géographique..."
+}

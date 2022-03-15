@@ -1,0 +1,45 @@
+<ng-template [ngIf]="!dataSuperCombo.type">
+  <nz-select
+    [nzPlaceHolder]="DataRequest ? DataRequest.lib_defaut : '---Selectionner---'"
+    [(ngModel)]="selectedItem"
+    (ngModelChange)="changeValue($event)"
+    [nzShowSearch]="true"
+    [nzLoading]="IsRequestChq"
+    [nzDisabled]="griseur"
+
+    nzSize="large"
+  >
+    <ng-template [ngIf]="!IsRequestChq && DataRequest && DataFormServer">
+      <ng-template ngFor let-option [ngForOf]="DataFormServer._description" let-idx="index">
+        <nz-option *ngIf="getfilterState(option)"
+                   [nzLabel]="getLabel(DataFormServer, option, DataRequest.rubrique_text)"
+                   [nzValue]="(GetFormat=== false) ? option[DataFormServer._entete[DataRequest.rubrique_valeur]] : DataFormServer._description[idx]"
+        >
+        </nz-option>
+      </ng-template>
+    </ng-template>
+
+  </nz-select>
+
+</ng-template>
+
+<ng-template [ngIf]="dataSuperCombo.type===true">
+  <button class="btn primary_background h3 col-md"
+          (click)="openModal()">{{DataRequest ? DataRequest.lib_defaut : '---Selectionner---'}}</button>
+
+
+  <nz-modal
+    [nzContent]="nzAuthContent"
+    [(nzVisible)]="isVisible"
+    [nzClosable]="false"
+    (nzOnCancel)="handleCancel()"
+    nzCancelText="Fermer"
+    (nzOnOk)="handleCancel()"
+  >
+    <ng-template #nzAuthContent>
+<!--      <app-datatable [DataRequest]="dataRequestTable" [MiniType]="true" (retourClickBtn)="buttonClick($event)"></app-datatable>-->
+    </ng-template>
+  </nz-modal>
+</ng-template>
+
+

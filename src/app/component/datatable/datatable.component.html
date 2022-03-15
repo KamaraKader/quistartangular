@@ -1,0 +1,249 @@
+<ng-template [ngIf]="isloading()">
+  <app-loading-p></app-loading-p>
+</ng-template>
+<ng-template [ngIf]="!isloading() && DataRequest && DataFormServer">
+  <ng-template [ngIf]="DataFormServer._description.length !==0">
+
+    <ng-template [ngIf]="!MiniType">
+      <table datatable [dtOptions]="dtOptions" class="table table-striped table-bordered table-hover dataTables-example dataTable no-footer dtr-inline" id="{{table_id}}">
+        <thead class="primary_background">
+        <tr>
+          <th *ngFor="let ent of DataRequest.columns; let index=ndx" scope="col" class="header_tab">
+            <span class="header_tab">{{ent.title}}</span>
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let donneee of DataFormServer._description ">
+          <!--<td *ngFor="let ent of DataRequest.entete ;" >{{donneee[ent.index]}}</td>-->
+          <td *ngFor="let ent of DataRequest.columns ;let index=ndx"
+              [attr.data-label]="ent.title"
+              scope="row">
+
+  <span [ngSwitch]="ent.type"  class="">
+        <span *ngSwitchCase="'btn'">
+                <button nz-button class="" title="Editer" (click)="buttonClick( donneee )"
+                        nzShape="round">
+        {{ent.libelle}} &nbsp;&nbsp;<i class="{{ent.ico}}"></i>
+      </button>
+        </span>
+
+
+
+
+    <ng-template>
+
+    </ng-template>
+    <span *ngSwitchCase="'enum_static'"
+            class="text-center">
+      {{ ent.values[donneee[DataFormServer._entete[ent.entete]]] || ent.values.default }}</span>
+
+      <span *ngSwitchCase="'enum_non_static'"
+            class="text-center content_tab"> {{ DataRequest[ent.values.object_name][donneee[DataFormServer._entete[ent.entete]]] || ent.values.default }}</span>
+      <span *ngSwitchCase="'checkbox'"
+            class="text-center content_tab">  <label nz-checkbox></label></span>
+      <span *ngSwitchCase="'dropdown'" class="text-center">
+      <button nz-button nz-dropdown [nzDropdownMenu]="menu" [nzPlacement]="'bottomCenter'">{{ent.libelle}} <i
+        class="{{ent.ico}}"></i></button>
+       <nz-dropdown-menu #menu="nzDropdownMenu">
+  <ul nz-menu>
+  <li nz-menu-item *ngFor="let entry of ent.dropdown" >
+  <!--  <span [ngSwitch]="entry.action.split('@')[0]">
+        <a *ngSwitchCase="'link'" [routerLink]="'/'+entry.action.split('@')[1]">{{entry.libelle}}</a>
+        <a *ngSwitchCase="'fonction'" (click)="entry.action.split('@')[1]" [>{{entry.libelle}}</a>
+    </span>-->
+ <a  (click)="sendDropDown(entry.action, donneee)">{{entry.libelle}}</a>
+  </li>
+  </ul>
+</nz-dropdown-menu>
+      </span>
+
+    <span *ngSwitchCase="'list_string_non_static'" class="text-left">
+        <table>
+        <tr *ngFor="let chk of (donneee[DataFormServer._entete[ent.entete]]||'').split('\n')" class="text-left" ><td>
+        <span>{{chk.split(':')[0]}}</span>
+        </td><td>
+        <span>{{chk.split(':')[1]}}</span>
+        </td></tr></table>
+      </span>
+
+    <span *ngSwitchCase="'list_input'" class="text-left">
+        <table>
+        <tr *ngFor="let chk of ent.sousentetes" class="text-left" ><td>
+        {{chk[1]}}
+        </td><td>
+
+          <input nz-input [placeholder]="chk[1]"
+                 [(ngModel)]="(donneee[DataFormServer._entete[ent.entete]]||{})[chk[0]]"/>
+
+        </td></tr></table>
+      </span>
+
+     <span *ngSwitchCase="'list_input_simple'" class="text-left">
+        <table>
+        <tr *ngFor="let chk of ent.sousentetes" class="text-left" ><td>
+         <span>
+          <input nz-input [placeholder]="chk[1]"
+                 [(ngModel)]="(donneee[DataFormServer._entete[ent.entete]]||{})[chk[0]]"/>
+        </span>
+        </td></tr></table>
+      </span>
+
+     <span *ngSwitchCase="'list_radio_static'" class="text-left">
+        <table>
+          <nz-radio-group [(ngModel)]="donneee[DataFormServer._entete[ent.entete]]"
+                          (ngModelChange)="mapOfCheckedId($event,donneee)">
+        <tr *ngFor="let chk of ent.values._description" class="text-left" ><td>
+        <label  nz-radio  [nzValue]="chk[ent.values._entete.code]">
+          {{chk[ent.values._entete.libelle]}}</label>
+        </td></tr></nz-radio-group></table>
+      </span>
+
+      <span *ngSwitchCase="'list_radio_non_static'" class="text-left">
+        <table>
+        <nz-radio-group [(ngModel)]="donneee[DataFormServer._entete[ent.entete]]" (ngModelChange)="mapOfCheckedId($event,donneee)">
+          <tr *ngFor="let chk of donneee[DataFormServer._entete[ent.values]]._description" ><td>
+          <label  nz-radio [nzValue]="chk[donneee[DataFormServer._entete[ent.values]]._entete.code]">
+            {{chk[donneee[DataFormServer._entete[ent.values]]._entete.libelle]}}</label>
+          </td></tr></nz-radio-group></table>
+      </span>
+
+      <span *ngSwitchCase="'list_checkbox_static'" class="text-left">
+        <table><tr *ngFor="let chk of ent.values._description" class="text-left" ><td>
+        <label  nz-checkbox   [(ngModel)]="donneee[DataFormServer._entete[ent.entete]][chk[ent.values._entete.code]]"
+                (ngModelChange)="mapOfCheckedId($event,donneee)">{{chk[ent.values._entete.libelle]}}</label>
+        </td></tr>
+        <ng-template [ngIf]="ent.action">
+            <tr><button nz-button class="btn primary_background" style="width: 100%" (click)="gereClick(ent.action.clickid, donneee )"
+                        nzShape="round">
+        {{ent.action.libelle}} <i class="{{ent.action.ico}}"></i>
+        </button></tr>
+          </ng-template>
+        </table>
+      </span>
+
+      <span *ngSwitchCase="'list_checkbox_non_static'" class="text-left">
+         <table><tr *ngFor="let chk of donneee[DataFormServer._entete[ent.values]]._description" class="text-left"><td>
+          <label  nz-checkbox   [(ngModel)]="donneee[DataFormServer._entete[ent.entete]][chk[donneee[DataFormServer._entete[ent.values]]._entete.code]]"
+                  (ngModelChange)="mapOfCheckedId($event,donneee)">{{chk[donneee[DataFormServer._entete[ent.values]]._entete.libelle]}}</label>
+         </td></tr></table>
+      </span>
+
+
+    <span *ngSwitchCase="'list_checkbox_static_2'" class="text-left">
+        <table>
+          <ng-template ngFor let-chk [ngForOf]="ent.values._description" class="text-left">
+          <tr *ngIf="fixedata(donneee[DataFormServer._entete[ent.entete_key]] +'.'+ ent.entete, chk[ent.values._entete.code], (donneee[DataFormServer._entete[ent.entete]][chk[ent.values._entete.code]]) ) == true"><td >
+        <label  nz-checkbox     [(ngModel)]="donneee[DataFormServer._entete[ent.entete]][chk[ent.values._entete.code]]"
+                (ngModelChange)="mapOfCheckedId($event,donneee)">{{chk[ent.values._entete.libelle]}}</label>
+        </td></tr></ng-template>
+        <ng-template [ngIf]="ent.action">
+            <tr><button nz-button class="btn primary_background" style="width: 100%" (click)="gereClick(ent.action.clickid, donneee )"
+                        nzShape="round">
+        {{ent.action.libelle}} <i class="{{ent.action.ico}}"></i>
+        </button></tr>
+          </ng-template>
+        </table>
+      </span>
+
+      <span *ngSwitchCase="'list_checkbox_non_static_2'" class="text-left">
+         <table>
+           <ng-template ngFor let-chk [ngForOf]="donneee[DataFormServer._entete[ent.values]]._description"  class="text-left">
+             <tr *ngIf="fixedata(donneee[DataFormServer._entete[ent.entete_key]] + '.' + ent.entete, chk[donneee[DataFormServer._entete[ent.values]]._entete.code], (donneee[DataFormServer._entete[ent.entete]][chk[donneee[DataFormServer._entete[ent.values]]._entete.code]]) ) == true">
+             <td>
+             <label  nz-checkbox   [(ngModel)]="donneee[DataFormServer._entete[ent.entete]][chk[donneee[DataFormServer._entete[ent.values]]._entete.code]]"
+                     (ngModelChange)="mapOfCheckedId($event,donneee)">{{chk[donneee[DataFormServer._entete[ent.values]]._entete.libelle]}}</label>
+            </td></tr>
+          </ng-template>
+         </table>
+      </span>
+
+    <!--<span *ngSwitchCase="'list_checkbox_static'" class="text-left">
+      <div><span *ngFor="let chk of ent.values._description" class="text-left" >
+      <label  nz-checkbox   [(ngModel)]="donneee[DataFormServer._entete[ent.entete]][ent.values._entete.code]"
+              (ngModelChange)="mapOfCheckedId($event,donneee)">{{chk[ent.values._entete.libelle]}}</label>
+      </span></div>
+    </span>
+
+    <span *ngSwitchCase="'list_checkbox_non_static'" class="text-left">
+       <div><span *ngFor="let chk of donneee[DataFormServer._entete[ent.values]]._description" class="text-left">
+        <label  nz-checkbox   [(ngModel)]="donneee[DataFormServer._entete[ent.entete]][donneee[DataFormServer._entete[ent.values]]._entete.code]"
+                (ngModelChange)="mapOfCheckedId($event,donneee)">{{chk[donneee[DataFormServer._entete[ent.values]]._entete.libelle]}}</label>
+       </span></div>
+    </span>-->
+
+      <span *ngSwitchCase="'checkbox_2'" class="text-center">
+        <label nz-checkbox [(ngModel)]="donneee[DataFormServer._entete[ent.entete]]"
+               (ngModelChange)="mapOfCheckedId($event,donneee)"></label>
+      </span>
+
+       <span *ngSwitchCase="'checkbox_3'" class="text-center">
+        <label nz-checkbox [(ngModel)]="getcheckedElementsObject(donneee[DataFormServer._entete[ent.entete]])[donneee[DataFormServer._entete[ent.entete]]]"></label>
+      </span>
+
+        <span *ngSwitchCase="'number'"
+              class="text-center content_tab"> {{(donneee[DataFormServer._entete[ent.entete]])|  number:'':'fr-FR'}}</span>
+        <span *ngSwitchCase="'date'"
+              class="text-center content_tab"> {{mahDateFormat(donneee[DataFormServer._entete[ent.entete]],
+            ent.formatFrom, ent.formatDest
+        )}}</span>
+
+    <span *ngSwitchCase="'input_number'"
+          class="text-center content_tab">    <input nz-input [placeholder]="ent.libelle" [mask]="ent.mask||'0{12}'" [class]="'text-'+(ent.align || 'center')"
+                                                     [(ngModel)]="donneee[DataFormServer._entete[ent.entete]]"
+                                                     (ngModelChange)="handleInput($event,donneee)"/>
+    </span>
+
+     <span *ngSwitchCase="'input'"
+           class="text-center content_tab">    <input nz-input [placeholder]="ent.libelle" [mask]="ent.mask||''" [class]="'text-'+(ent.align || 'right')"
+                                                      [(ngModel)]="donneee[DataFormServer._entete[ent.entete]]"
+                                                      (ngModelChange)="handleInput($event,donneee)" (keyup)="gereInputKeyUp(ent.entete, donneee)"/>
+    </span>
+
+
+
+    <span *ngSwitchDefault class="text-center content_tab">{{donneee[DataFormServer._entete[ent.entete]]}}</span>
+
+      </span>
+          </td>
+
+
+        </tr>
+        </tbody>
+
+
+
+      </table>
+    </ng-template>
+  </ng-template>
+  <ng-template [ngIf]="(DataFormServer._description.length ===0)">
+    <!--   <nz-empty>
+
+
+       </nz-empty>-->
+
+    <!--<div class="col-md-6"  style="border-radius:5px/5px;margin: auto; background-color: white ;padding: 10px">
+
+      <nz-result nzStatus="info" nzTitle="Aucune données ">
+
+      </nz-result>
+
+    </div>-->
+    <div class="col-md-12" style="border-radius:5px/5px;margin: auto; background-color: rgba(0, 0, 0, 0) ;padding: 10px;font-size: larger" >
+
+      <!-- <nz-result nzStatus="info" nzTitle="Aucune données ">-->
+
+      <!-- </nz-result>-->
+      <!-- <nz-alert nzType="info" nzMessage="Aucune donnée" nzShowIcon></nz-alert>-->
+      <!-- <nz-alert style="font-size: 20px" nzBanner nzMessage="Aucune donnée" nzCloseable></nz-alert>-->
+      <!-- <nz-alert nzType="warning" nzMessage="Aucune donnée" nzShowIcon ></nz-alert>-->
+      <div class="alert fade show fa-1x text-center" style="color: darkgray;background-color: #ffffff;border: 1px darkgray solid" role="alert">
+        <i class="fas fa-exclamation-circle mr-3 mt-1 fa-2x"></i>
+        <strong style="font-size: 20px">Aucune donnée !</strong>
+      </div>
+
+    </div>
+
+  </ng-template>
+</ng-template>
+

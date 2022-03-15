@@ -1,0 +1,17 @@
+.card.full-card {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 99999;
+  border-radius: 0;
+  width: calc(100vw) !important;
+  height: 100vh !important;
+}
+
+.card {
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  -webkit-transition: box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
+  border-top: 3px solid #f1a15d;
+}

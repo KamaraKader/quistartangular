@@ -1,0 +1,374 @@
+{"menu": [{
+		"titre": "CONSULTATIONS",
+		"icons": "far fa-money-bill-alt",
+
+		"desc":"Avec %1, restez en parfaite harmonie avec vos finances et informés sur l’évolution de vos finances. Désormais, consultez le solde de votre compte en temps réel et recevez le via sms en toute simplicité.",
+		"sousmenu": [{
+			"titre": "Mes comptes bancaires",
+			"link": "solde",
+			"cible": "USERACCOUNT_A4",
+			"icon": "far fa-money-bill-alt",
+			"desc":"Avec %1, restez en parfaite harmonie avec vos finances et informés sur l’évolution de vos finances. Désormais, consultez le solde de votre compte en temps réel et recevez le via sms en toute simplicité.",
+			"titre_page":"Mes comptes bancaires"
+		},
+		{
+			"titre": "Mes cartes bancaire",
+			"link": "cartes",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-money fa-fw",
+			"desc":"",
+			"titre_page":"Mes cartes bancaire"
+		},
+		{
+			"titre": "Mes impayés et Incidents",
+			"link": "impayes",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-money fa-fw",
+			"desc":"",
+			"titre_page":"Mes impayés et Incidents"
+		},
+		{
+			"titre": "Suivi des dépôts à terme",
+			"link": "dat",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-money fa-fw",
+			"desc":""
+		},
+		{
+			"titre": "Mes virement reçu",
+			"link": "PAGE-liste-carte.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-money fa-fw",
+			"desc":""	,
+			"titre_page":"Liste de mes virement reçu"
+		},
+		{
+			"titre": "Mes paiements éffectués",
+			"link": "PAGE-liste-carte.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-money fa-fw",
+			"desc":""
+
+		},
+		{
+			"titre": "Mes paiements reçu",
+			"link": "PAGE-liste-carte.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-money fa-fw",
+			"desc":""
+
+		},
+		{
+			"titre": "Mes prêts",
+			"link": "mesprets.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-money fa-fw",
+			"desc":""
+
+		},
+		{
+			"titre": "Mes opérations du jour",
+			"link": "operation_jour.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-money fa-fw",
+			"desc":"Avec  %1, recevez en temps réel des alertes de toutes les opérations passées sur vos comptes. Aussi consultez les détails de toutes les opérations grâce au menu Avis d’opérations.",
+			"titre_page":"Mes opérations du jour"
+
+		},{
+			"titre": "Mes mouvements",
+			"link": "avisoperationdetails1.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-money fa-fw",
+			"desc":"Avec  %1, recevez en temps réel des alertes de toutes les opérations passées sur vos comptes. Aussi consultez les détails de toutes les opérations grâce au menu Avis d’opérations.",
+			"titre_page":"Mes mouvements"
+
+
+		},
+  {
+   "titre": "Mes extraits de compte",
+   "link": "extrait-affiche.awp",
+   "cible": "USERACCOUNT_A4",
+   "icon": "fa fa-money fa-fw",
+   "desc":"Simplifiez-vous la vie avec %1, consultez et imprimez vos relevés 24h/24 et 07J/07 ",
+   "titre_page":"Mes extraits de compte"
+  },{
+   "titre": "Relevès de comptes",
+   "link": "releve_pro.awp",
+   "cible": "USERACCOUNT_A4",
+   "icon": "fa fa-money fa-fw",
+   "desc":"Simplifiez-vous la vie avec %1, consultez et imprimez vos relevés 24h/24 et 07J/07 ",
+   "titre_page":"Suivi de transmission de mes relevès de comptes"
+  },
+		{
+			"titre": "Devises",
+			"link": "devises.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-money fa-fw",
+			"desc":"Avec %1, Effectuez vos virements en toute sécurité, transférez et suivez tous les mouvements de votre compte en toute sérénité. Recevez de façon instantanée un sms de confirmation sur votre téléphone après chaque opération de virement .",
+			"titre_page":"Devises"
+
+		},
+		{
+			"titre": "Edition de RIB",
+			"link": "editionderib.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-id-card-o fa-fw",
+			"desc":"",
+			"titre_page":"Impression du relevè d'identité bancaire"
+		}]
+	},
+	{
+		"titre": "OPERATIONS",
+		"icons": "fas fa-exchange-alt",
+		"desc":"Avec %1, Effectuez vos virements en toute sécurité, transférez et suivez tous les mouvements de votre compte en toute sérénité. Recevez de façon instantanée un sms de confirmation sur votre téléphone après chaque opération de virement .",
+		"sousmenu": [
+		{
+			"titre": "Virements",
+			"link": "virements.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-handshake-o fa-fw",
+			"desc":"",
+			"titre_page":"Virements"
+		},{
+			"titre": "Virement permanent",
+			"link": "virementpermanentprows.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-handshake-o fa-fw",
+			"desc":"",
+			"titre_page":"Virement permanent"
+		},{
+			"titre": "Virement multiple",
+			"link": "vir-multiple.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-handshake-o fa-fw",
+			"desc":"",
+			"titre_page":"Virement multiple"
+		},{
+			"titre": "Validation de virements",
+			"link": "validation-virement.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-handshake-o fa-fw",
+			"titre_page":"Validation de virements"
+		},{
+
+			"titre": "Gestion de bénéficiaires",
+			"link": "listecomptebeneficiaire.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-handshake-o fa-fw",
+			"desc":"",
+			"titre_page":"Gestion de bénéficiaires"
+		},{
+			"titre": "Historique de virements",
+			"link": "historique-virement.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-handshake-o fa-fw",
+			"desc":"",
+			"titre_page":"Historique de virements"
+		},{
+			"titre": "Rechargement de cartes",
+			"link": "erecharge.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-handshake-o fa-fw",
+			"desc":"Il permettra de rechanger toutes les cartes marchands (Stations, hôtel, restaurants…). A la différence de eRecharge qui permet de faire les rechargements électroniques (Téléphone).",
+			"titre_page":"Rechargement de cartes"
+		},{
+			"titre": "Bank to Wallet",
+			"link": "banktowallet.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-handshake-o fa-fw",
+			"desc":"Il permettra de rechanger toutes les cartes marchands (Stations, hôtel, restaurants…). A la différence de eRecharge qui permet de faire les rechargements électroniques (Téléphone).",
+			"titre_page":"Bank to Wallet"
+		},{
+			"titre": "Payfor",
+			"link": "payfor.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-handshake-o fa-fw",
+			"desc":"",
+			"titre_page":"Payfor"
+		},{
+			"titre": "Cash express",
+			"link": "moneapay.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-handshake-o fa-fw",
+			"titre_page":"Cash express"
+		},{
+			"titre": "Westbank",
+			"link": "test.html",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-handshake-o fa-fw",
+			"desc":"",
+			"titre_page":"Westbank"
+		}]
+	},
+		{
+		"titre": "MA MESSAGERIE",
+		"icons": "far fa-envelope",
+		"desc":"Avec %1, Effectuez vos virements en toute sécurité, transférez et suivez tous les mouvements de votre compte en toute sérénité. Recevez de façon instantanée un sms de confirmation sur votre téléphone après chaque opération de virement .",
+		"sousmenu": [{
+			"titre": "Ebox",
+			"link": "eboxlauncher.awp",
+			"cible": "blank",
+			"icon": "fa fa-envelope-o fa-fw",
+			"desc":"",
+			"titre_page":"Ebox"
+		},
+		{
+			"titre": "ChatBox",
+			"link": "messagerienova.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-comments-o fa-fw",
+			"desc":"",
+			"titre_page":"ChatBox"
+		}]
+	},{
+		"titre": "ESPACE PAIEMENTS",
+		"icons": "fas fa-exchange-alt",
+		"desc":"Avec %1, Effectuez vos virements en toute sécurité, transférez et suivez tous les mouvements de votre compte en toute sérénité. Recevez de façon instantanée un sms de confirmation sur votre téléphone après chaque opération de virement .",
+		"sousmenu": [
+		{
+			"titre": "Paiement factures",
+			"link": "Paiement.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-comments-o fa-fw",
+			"desc":"",
+			"titre_page":"Paiement factures"
+		}]
+	},{
+		"titre": "NOS PRODUITS",
+		"icons": "fa fa-cubes fa-fw",
+		"desc":"Avec %1, Effectuez vos virements en toute sécurité, transférez et suivez tous les mouvements de votre compte en toute sérénité. Recevez de façon instantanée un sms de confirmation sur votre téléphone après chaque opération de virement .",
+		"sousmenu": [{
+			"titre": "Sendfiles",
+			"link": "sendfileclient.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-envelope-o fa-fw",
+			"desc":"",
+			"titre_page":"Sendfiles"
+		},
+		{
+			"titre": "eCertif",
+			"link": "ecertifclient.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-comments-o fa-fw",
+			"desc":"",
+			"titre_page":"eCertif"
+		},
+		{
+			"titre": "Rapidpay",
+			"link": "nondisponible.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-comments-o fa-fw",
+			"desc":"",
+			"titre_page":"Rapidpay"
+		},
+		{
+			"titre": "eBourse",
+			"link": "eBourse.awp",
+			"cible": "USERACCOUNT_A4",
+			"desc":"",
+			"titre_page":"eBourse"
+		}]
+	},{
+		"titre": "FORMULAIRES",
+		"icons": "far fa-file-alt",
+		"sousmenu": [{
+			"titre": "Compte particulier",
+			"link": "formulaireprive2.awp",
+			"no":"01",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-envelope-o fa-fw",
+			"desc":"Pour mieux interagir avec la banque, %1 vous met a disposition des formulaires de demandes intuitifs et taillés sur mesure.",
+			"titre_page":"Compte particulier"
+		},{
+			"titre": "Compte entreprise",
+			"link": "formulaireprive2.awp",
+			"no":"02",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-envelope-o fa-fw",
+			"desc":"",
+			"titre_page":"Compte entreprise"
+		},{
+			"titre": "Commande chequiers",
+			"link": "formulaireprive2.awp",
+			"no":"04",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-envelope-o fa-fw",
+			"desc":"",
+			"titre_page":"Commande chequiers"
+		},{
+			"titre": "Rechargement carte",
+			"link": "formulaireprive2.awp",
+			"no":"09",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-envelope-o fa-fw",
+			"desc":"",
+			"titre_page":"Rechargement carte"
+		},{
+			"titre": "Reclamation monétique",
+			"link": "formulaireprive2.awp",
+			"no":"05",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-envelope-o fa-fw",
+			"desc":"",
+			"titre_page":"Reclamation monétique"
+		},{
+			"titre": "Satisfaction client",
+			"link": "formulaireprive2.awp",
+			"no":"06",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-envelope-o fa-fw",
+			"desc":"",
+			"titre_page":"Satisfaction client"
+		},{
+			"titre": "Ecoute client",
+			"link": "formulaireprive2.awp",
+			"no":"07",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-envelope-o fa-fw",
+			"desc":"",
+			"titre_page":"Ecoute client"
+		},{
+			"titre": "Consultion des formulaires",
+			"link": "formulaireprive2.awp",
+			"no":"10",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-envelope-o fa-fw",
+			"desc":"",
+			"titre_page":"Consultion des formulaires"
+		}]
+	},{
+		"titre": "AIDE EN LIGNE",
+		"icons": "fa fa-question-circle fa-fw",
+		"desc":"Avec %1, Effectuez vos virements en toute sécurité, transférez et suivez tous les mouvements de votre compte en toute sérénité. Recevez de façon instantanée un sms de confirmation sur votre téléphone après chaque opération de virement .",
+		"sousmenu": [
+		{
+			"titre": "FAQ",
+			"link": "FAQ_prive.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-question-circle fa-fw",
+			"desc":"",
+			"titre_page":"Foir aux questions"
+		}
+]
+	},{
+		"titre": "LOCALISATIONS",
+		"icons": "fa fa-compass fa-fw",
+		"desc":"Ici retrouver les agences et les DABS.",
+		"sousmenu": [
+		{
+			"titre": "Localisation des agences",
+			"link": "agences.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-question-circle fa-fw",
+			"desc":"",
+			"titre_page":"Localisation des agences"
+		},{
+			"titre": "Localisation des DABs",
+			"link": "PAGE-dabsbank.awp",
+			"cible": "USERACCOUNT_A4",
+			"icon": "fa fa-question-circle fa-fw",
+			"desc":"",
+			"titre_page":"Localisation des DABs"
+		}
+]
+	}]}

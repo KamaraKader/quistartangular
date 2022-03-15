@@ -1,0 +1,154 @@
+{"menu": [{
+  "titre": "Configuration de base",
+  "icons": "fas fa-cog",
+
+  "desc":"Avec %1, restez en parfaite harmonie avec vos finances et informés sur l’évolution de vos finances. Désormais, consultez le solde de votre compte en temps réel et recevez le via sms en toute simplicité.",
+  "sousmenu": [
+    {
+      "titre": "Type d'entité",
+      "link": "entite",
+      "cible": "USERACCOUNT_A4",
+      "icon": "fa fa-cog",
+      "desc":"",
+      "titre_page":"Type d'entité"
+    },{
+      "titre": "Type de compte",
+      "link": "compte",
+      "cible": "USERACCOUNT_A4",
+      "icon": "fa fa-money fa-fw",
+      "desc":"Simplifiez vous la vie avec %1, consultez et imprimez vos relevés 24h/24 et 07J/07.Grâce à ce service, consultez les mouvements comptabilisés réalisés sur votre compte au cours des premières et dernières journées comptables du mois en cours.",
+      "titre_page":"Type de compte"
+    },
+    {
+    "titre": "Rubrique comptable",
+    "link": "RC",
+    "cible": "USERACCOUNT_A4",
+    "icon": "fa fa-money fa-fw",
+    "desc":"Avec %1, restez en parfaite harmonie avec vos finances et informés sur l’évolution de vos finances. Désormais, consultez le solde de votre compte en temps réel et recevez le via sms en toute simplicité.",
+    "titre_page":"Rubrique comptable"
+  },
+    {
+    "titre": "Code agent économique",
+    "link": "code-agec",
+    "cible": "USERACCOUNT_A4",
+    "icon": "fa fa-money fa-fw",
+    "desc":"",
+    "titre_page":"Code agent économique"
+  },
+    {
+      "titre": "Tranche d'age",
+      "link": "tranche-age",
+      "cible": "USERACCOUNT_A4",
+      "icon": "fa fa-money fa-fw",
+      "desc":"",
+      "titre_page":"Tranche d'age"
+    },
+    {
+      "titre": "Pays de résidence",
+      "link": "resident",
+      "cible": "USERACCOUNT_A4",
+      "icon": "fa fa-money fa-fw",
+      "desc":"",
+      "titre_page":"resident"
+    },
+    {
+      "titre": "Package",
+      "link": "package",
+      "cible": "USERACCOUNT_A4",
+      "icon": "fa fa-money fa-fw",
+      "desc":"",
+      "titre_page":"Package"
+    }]
+},{
+  "titre": "Paramétrage des formules",
+
+  "icons": "list-icon feather feather-repeat",
+  "desc":"Avec %1, Effectuez vos virements en toute sécurité, transférez et suivez tous les mouvements de votre compte en toute sérénité. Recevez de façon instantanée un sms de confirmation sur votre téléphone après chaque opération de virement .",
+  "sousmenu": [
+    {
+      "titre": "Classes",
+      "link": "classes",
+      "cible": "USERACCOUNT_A4",
+      "icon": "fa fa-handshake-o fa-fw",
+      "desc":"",
+      "titre_page":"Classes"
+    },{
+      "titre": "Services",
+      "link": "services",
+      "cible": "USERACCOUNT_A4",
+      "icon": "fa fa-handshake-o fa-fw",
+      "desc":"",
+      "titre_page":"Services"
+    },
+    {
+      "titre": "Formules",
+      "link": "formule",
+      "cible": "USERACCOUNT_A4",
+      "icon": "fa fa-handshake-o fa-fw",
+      "desc":"",
+      "titre_page":"Liste des formules"
+    }]
+},{
+  "titre": "Administration",
+
+  "icons": "list-icon feather feather-repeat",
+  "desc":"Avec %1, Effectuez vos virements en toute sécurité, transférez et suivez tous les mouvements de votre compte en toute sérénité. Recevez de façon instantanée un sms de confirmation sur votre téléphone après chaque opération de virement .",
+  "sousmenu": [
+    {
+      "titre": "Rechercher un abonnement",
+      "link": "abonnementClient",
+      "cible": "USERACCOUNT_A4",
+      "icon": "fa fa-handshake-o fa-fw",
+      "desc":"",
+      "titre_page":"Rechercher un abonnement"
+    },{
+      "titre": "Configuration de workflow",
+      "link": "workflow",
+      "cible": "USERACCOUNT_A4",
+      "icon": "fa fa-handshake-o fa-fw",
+      "desc":"",
+      "titre_page":"Configuration de workflow"
+    },{
+      "titre": "Gestion de panel",
+      "link": "gestion-panel",
+      "cible": "USERACCOUNT_A4",
+      "icon": "fa fa-handshake-o fa-fw",
+      "desc":"",
+      "titre_page":"Configuration de workflow"
+    }]
+},{
+  "titre": "Validation",
+
+  "icons": "list-icon feather feather-repeat",
+  "desc":"Avec %1, Effectuez vos virements en toute sécurité, transférez et suivez tous les mouvements de votre compte en toute sérénité. Recevez de façon instantanée un sms de confirmation sur votre téléphone après chaque opération de virement .",
+  "sousmenu": [
+    {
+      "titre": "Validation des dépôts",
+      "link": "suivieDepot",
+      "cible": "USERACCOUNT_A4",
+      "icon": "fa fa-handshake-o fa-fw",
+      "desc":"",
+      "titre_page":"Validation des dépôts"
+    }]
+},{
+  "titre": "Gestion des utilisateurs",
+
+  "icons": "fas fa-users-cog",
+  "desc":"Avec %1, Effectuez vos virements en toute sécurité, transférez et suivez tous les mouvements de votre compte en toute sérénité. Recevez de façon instantanée un sms de confirmation sur votre téléphone après chaque opération de virement .",
+  "sousmenu": [
+    {
+      "titre": "Profil",
+      "link": "profil",
+      "cible": "USERACCOUNT_A4",
+      "icon": "fa fa-handshake-o fa-fw",
+      "desc":"",
+      "titre_page":"profil"
+    },{
+      "titre": "Utilisateurs",
+      "link": "utilsateur",
+      "cible": "USERACCOUNT_A4",
+      "icon": "fas fa-users-cog",
+      "desc":"",
+      "titre_page":"Suive des dépôts"
+    }]
+}]}

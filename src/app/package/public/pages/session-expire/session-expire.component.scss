@@ -1,0 +1,17 @@
+.expire-wrapper{
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 1700px;
+  //background-image: url(bgImg.jpg);
+  background-size: cover;
+}
+
+.row{
+  margin-left: 327px;
+}

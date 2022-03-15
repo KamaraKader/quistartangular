@@ -1,0 +1,16 @@
+{"uri":"api_veropay/_get_liste_marchand_compagnie_pp","methode":"GET",
+  "p_per_line": 7,
+"columns":
+[
+  {"title":"Nom","entete":"r_nom"},
+  {"title":"Prénoms","entete":"r_prenoms"},
+  {"title":"Profil","entete":"r_lib__profil"},
+  {"title":"Status","entete":"r_statut", "type": "enum_static", "values":{"0":"Désactivé","1":"Activé"}},
+  {"title":"Action","entete":"","type": "btn","libelle": "Option","type": "dropdown","libelle": "Options", "ico": "fas fa-list-ul",
+    "dropdown": [
+      {"libelle": "Detail", "action": "fonction@editer"},
+      {"libelle": "Afficher les comptes", "action": "fonction@afficherCompte"}
+    ]
+  }
+
+]}

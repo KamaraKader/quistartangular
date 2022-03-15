@@ -1,0 +1,30 @@
+<div class="modal fade dataInfo" id="modal-centered" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" *ngIf="data">
+      <div class="" [ngSwitch]="data.status">
+        <div *ngSwitchCase="'error'" class="alert primary_background text-white card-title" role="alert">
+          <i class="fas fa-times-circle"></i>&nbsp;&nbsp;&nbsp;Erreur</div>
+        <div *ngSwitchCase="'warning'" class="alert primary_background text-white card-title" role="alert">
+          <i class="fas fa-exclamation-circle"></i>&nbsp;&nbsp;&nbsp;Attention!</div>
+        <div *ngSwitchCase="'success'" class="alert primary_background text-white card-title" role="alert">
+          <i class="far fa-check-circle"></i>&nbsp;&nbsp;&nbsp;Succès</div>
+      </div>
+
+      <div class="modal-body text-center">
+        <div class="" [ngSwitch]="data.status">
+          <div *ngSwitchCase="'error'" class="alert" role="alert">
+            <i class="fas fa-times-circle fa-4x"></i></div>
+          <div *ngSwitchCase="'warning'" class="alert" role="alert">
+            <i class="fas fa-exclamation-circle fa-4x"></i></div>
+          <div *ngSwitchCase="'success'" class="alert" role="alert">
+            <i class="far fa-check-circle fa-4x"></i></div>
+        </div>
+        <span class="text-gray">{{data.libelle}}</span>
+     </div>
+      <div class="text-center modal-footer footer-div">
+        <button type="button" class="btn primary_background text-white" data-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+

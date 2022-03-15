@@ -1,0 +1,8 @@
+{
+  "/api_veropay/*": {
+    "target": "http://105.235.123.196/",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

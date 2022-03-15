@@ -1,0 +1,22 @@
+{"uri": "api_vitbank_backoffice/auth",
+  "methode": "POST",
+  "entete" :{
+    "_nom_prenom":0,
+    "_code_langue":1,
+    "_last_connect":2,
+    "_contact":3,
+    "_racine":4,
+    "_profil":5,
+    "_idbanque":6,
+    "_code_banque":7,
+    "_titi_man":8,
+    "_hash_ebox":9,
+    "_formule":10,
+    "_service":11,
+    "_nom_client":12,
+    "_code_pays":13,
+    "_Swift":14,
+    "_zone_monetaire":15,
+    "_type_client":16
+  }
+}

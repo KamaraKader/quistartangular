@@ -1,0 +1,92 @@
+:host {
+  width: 100%;
+}
+
+.ant-table-body table {
+  width:100%;
+}
+
+.header_tab{
+  font-size: medium;
+  font-weight: lighter;
+  text-align: left;
+}
+
+.content_tab{
+  font-size: 15px;
+  text-align: left;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+table > tbody > tr {
+  border-bottom: 2px solid #ccc;
+}
+
+table th {
+  color: #f0f2f5;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+span.ant-table-column-title {
+  font-size: medium;
+}
+
+.table.dataTable[class*="table-"] thead th {
+  background-color: white !important;
+  color: #0c0f1a;
+  font-weight: bold;
+  border-color: #e7e7e7;
+}
+
+table.dataTable.no-footer {
+  border-bottom: 1px solid #e2e5e8;
+}
